@@ -6,6 +6,7 @@ class Head extends Component {
 				<header>
 					<h1>Malibu Landscaping & Lawn Service</h1>
 					<h2>Charlotte, NC</h2>
+					<i class="fas fa-caret-square-down" />
 				</header>
 			</>
 		)

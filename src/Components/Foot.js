@@ -5,7 +5,7 @@ class Foot extends Component {
 		return (
 			<>
 				<footer>
-					Wbsite design and coding by{' '}
+					Website designed and coded by
 					<a
 						href="https://www.justin-oliver.com"
 						target="_balnk"

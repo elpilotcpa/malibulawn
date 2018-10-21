@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import Show from './Show'
 
 class Home extends Component {
 	render() {
 		return (
 			<>
 				<section>
+					<Show />
 					<p>
 						At Malibu Landscaping & Lawn Service, we take care to provide our
 						customers high quality Landscaping services personalized for their
@@ -27,7 +29,6 @@ class Home extends Component {
 							<i class="fas fa-envelope" /> elpilotcpa@msn.com
 						</a>
 					</p>
-					<img src="./img/angieslist2014.png" />
 				</section>
 			</>
 		)
