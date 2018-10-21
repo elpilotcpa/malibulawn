@@ -22,20 +22,20 @@ class Show extends Component {
 			transValue: -this.slideWidth() * this.state.index
 		}))
 	}
-	componentWillMount() {
-		this.setState(() => ({
-			pictures: [
-				'./img/angieslist2014.png',
-				'./img/pic19.jpg',
-				'./img/pic28.jpg',
-				'./img/pic13.jpg',
-				'./img/pic26.jpg',
-				'./img/TN02.png'
-			],
-			index: 0,
-			transValue: 0
-		}))
-	}
+	// componentWillMount() {
+	// 	this.setState(() => ({
+	// 		pictures: [
+	// 			'./img/angieslist2014.png',
+	// 			'./img/pic19.jpg',
+	// 			'./img/pic28.jpg',
+	// 			'./img/pic13.jpg',
+	// 			'./img/pic26.jpg',
+	// 			'./img/TN02.png'
+	// 		],
+	// 		index: 0,
+	// 		transValue: 0
+	// 	}))
+	// }
 
 	componentDidMount() {
 		window.addEventListener('resize', this.updateScreen)
@@ -60,7 +60,7 @@ class Show extends Component {
 
 	render() {
 		return (
-			<div className="slider">
+			<div className="slider show-frame">
 				<div
 					className="slide-frame"
 					style={{

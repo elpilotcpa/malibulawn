@@ -12,23 +12,77 @@ header {
 	font-family: 'Molle', cursive;
 	font-weight: normal;
 	z-index: 999;
+	position: fixed;
+	width: 100%;
+	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
+}
+.content {
+	padding: 5rem 1rem 0 1rem;
 }
 h1 {
 	margin: 0;
+	/* text-align: center; */
+	padding: 0.2rem 0 0 3rem;
+	font-size: 2rem;
 }
-
+h2 {
+	margin: 0;
+}
+h3 {
+	margin: 0;
+	/* text-align: center; */
+	padding: 0 0.5rem 0.2rem 0;
+}
+button {
+	border: none;
+	background: transparent;
+	font-size: 2rem;
+	color: rgb(2, 60, 64);
+	transition: transform 0.4s ease-in-out;
+	outline: none;
+	padding: 0;
+	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
+}
+button:active {
+	transform: scale(0.8);
+}
+nav ul {
+	list-style: none;
+	padding: 0 1rem;
+	margin: 5rem 0 0 0;
+	font-size: 1.4rem;
+}
+li {
+	padding: 0.5rem 0;
+}
+p {
+	text-indent: 1rem;
+	padding: 0.5rem;
+	margin: 0;
+}
+a {
+	color: rgb(2, 60, 64);
+	text-decoration: none;
+	font-weight: bolder;
+	transition: transform 0.4s ease-in-out, color 0.1s ease-in-out,
+		text-shadow 0.4s ease-in-out;
+	outline: none;
+}
+a:active {
+	color: rgb(255, 242, 241);
+}
 .slider {
 	position: relative;
-	max-width: 800px;
-	/* height: 100vh; */
-	margin: 0 auto;
+	max-width: 500px;
+	margin: 0;
+
 	overflow: hidden;
 	white-space: nowrap;
 }
 
 .slider-frame {
 	position: relative;
-	height: 100%;
+	height: 90%;
 	width: 100%;
 }
 
@@ -36,8 +90,8 @@ h1 {
 	display: inline-block;
 	height: 100%;
 	width: 100%;
-	margin-top: 1rem;
 	z-index: 90;
+	margin: 0;
 }
 .slide-pic {
 	width: 100%;
@@ -67,28 +121,123 @@ h1 {
 .nextArrow:active {
 	text-shadow: none;
 }
+.show-frame {
+	margin: 0 2rem;
+}
 .show {
 	position: fixed;
+	height: 100%;
+	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
 	background: linear-gradient(
 		to top,
-		rgba(93, 253, 203, 0.5),
-		rgba(56, 228, 174, 0.5)
+		rgba(93, 253, 203, 0.8),
+		rgba(56, 228, 174, 0.8)
 	);
-
-	z-index: 950;
+	z-index: 900;
+	transition: margin 0.5s ease-in-out;
 }
 .hide {
-	display: none;
-	z-index: 950;
+	position: fixed;
+	height: 100%;
+	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
+
+	background: linear-gradient(
+		to top,
+		rgba(93, 253, 203, 0.8),
+		rgba(56, 228, 174, 0.8)
+	);
+	margin-left: -100%;
+	z-index: 900;
+	transition: margin 0.5s ease-in-out;
 }
 .full-nav {
 	display: none;
 }
+.title {
+	display: flex;
+	justify-content: space-between;
+}
+.mobile-nav {
+	margin: 2rem 0 0 0.5rem;
+}
+.contact-list {
+	text-align: center;
+	margin: 0;
+}
+.contact-list i {
+	font-size: 3rem;
+	margin: 0.5rem 0 0 0;
+}
+.contact-home {
+	display: none;
+}
 @media (min-width: 500px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	h1 {
+		font-size: 4rem;
+		padding: 0 1rem;
+	}
+	h3 {
+		font-size: 2em;
+		padding: 1rem 0 0 1rem;
+	}
+	span {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		margin: 0 1rem;
+	}
+	a:hover {
+		text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241),
+			-0.1rem -0.1rem 0.5rem rgb(255, 242, 241),
+			-0.1rem -0.1rem 0.5rem rgb(255, 242, 241),
+			0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
+	}
+	.title-full {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 	.toggle-button {
 		display: none;
 	}
 	.full-nav {
 		display: flex;
+	}
+	.show,
+	.hide {
+		display: none;
+	}
+	.contact-home {
+		display: flex;
+		flex-direction: column;
+		margin: 0 20%;
+	}
+	.contact-home a {
+		text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
+	}
+	.contact-home a:hover {
+		text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
+			-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
+			-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
+			0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
+	}
+	.content {
+		padding-top: 6rem;
+		flex-wrap: wrap;
+	}
+	.home-sec {
+		display: flex;
+		justify-content: center;
+		font-size: 1.7rem;
+		line-height: 3rem;
+	}
+	.home-sec p {
+		max-width: 600px;
+		text-indent: 2rem;
 	}
 }

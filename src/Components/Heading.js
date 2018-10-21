@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Link } from 'react-router-dom'
-import ToggleButton from './ToggleButton'
 class Heading extends Component {
 	state = {
 		popMenuOpen: false,
@@ -24,19 +23,21 @@ class Heading extends Component {
 	}
 
 	render() {
-		if (this.state.popMenuOpen) {
-			// popMenu = 'show'
-		}
-		if (this.state.popMenuOpen === false) {
-			// popMenu = 'hide'
-		}
 		return (
 			<Router>
 				<>
 					<header>
-						<h1>Malibu Landscaping & Lawn Service</h1>
-						<h2>Charlotte, NC</h2>
-						<ToggleButton click={this._toggleMenu} />
+						<div className="title">
+							<div className="mobile-nav">
+								<button className="toggle-button" onClick={this._toggleMenu}>
+									<i className="fas fa-bars" />
+								</button>
+							</div>
+							<div class="title-full">
+								<h1>Malibu</h1> <h3>Landscaping & Lawn Service</h3>
+							</div>
+						</div>
+
 						<nav className="full-nav">
 							<span>
 								<Link to="/">Home</Link>
@@ -73,6 +74,24 @@ class Heading extends Component {
 								<Link to="/services" onClick={this._toggleMenu}>
 									Services
 								</Link>
+							</li>
+						</ul>
+						<ul className="contact-list">
+							Contact Us
+							<li>
+								<a href="tel://170491063">
+									<i className="fas fa-phone-square" />
+								</a>
+							</li>
+							<li>
+								<a href="tel://9045358034">
+									<i className="fas fa-mobile" />
+								</a>
+							</li>
+							<li>
+								<a href="mailto:elpilotcpa@msn.com">
+									<i className="fas fa-envelope" />
+								</a>
 							</li>
 						</ul>
 					</nav>
