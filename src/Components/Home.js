@@ -16,17 +16,17 @@ class Home extends Component {
 					<p>Contact Us</p>
 					<p>
 						<a href="tel://170491063">
-							<i class="fas fa-phone-square" /> (704) 910-6379
+							<i className="fas fa-phone-square" /> (704) 910-6379
 						</a>
 					</p>
 					<p>
 						<a href="tel://9045358034">
-							<i class="fas fa-mobile" /> (904) 535-8034
+							<i className="fas fa-mobile" /> (904) 535-8034
 						</a>
 					</p>
 					<p>
 						<a href="mailto:elpilotcpa@msn.com">
-							<i class="fas fa-envelope" /> elpilotcpa@msn.com
+							<i className="fas fa-envelope" /> elpilotcpa@msn.com
 						</a>
 					</p>
 				</section>

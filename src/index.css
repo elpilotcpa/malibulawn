@@ -6,15 +6,21 @@ body {
 	font-family: 'Ledger', serif;
 }
 header {
+	margin: 0;
 	background: linear-gradient(to top, rgb(93, 253, 203), rgb(56, 228, 174));
 	color: rgb(2, 60, 64);
 	font-family: 'Molle', cursive;
 	font-weight: normal;
+	z-index: 999;
+}
+h1 {
+	margin: 0;
 }
 
 .slider {
 	position: relative;
 	max-width: 800px;
+	/* height: 100vh; */
 	margin: 0 auto;
 	overflow: hidden;
 	white-space: nowrap;
@@ -31,4 +37,58 @@ header {
 	height: 100%;
 	width: 100%;
 	margin-top: 1rem;
+	z-index: 90;
+}
+.slide-pic {
+	width: 100%;
+}
+.nextArrow {
+	position: absolute;
+	top: 50%;
+	right: 25px;
+	z-index: 99;
+	color: rgb(93, 253, 203);
+	font-size: 2rem;
+	text-shadow: -0.1rem 0.1rem 0.1rem black;
+	transition: text-shadow 0.5s ease-in-out;
+}
+
+.backArrow {
+	position: absolute;
+	top: 50%;
+	left: 25px;
+	z-index: 99;
+	color: rgb(93, 253, 203);
+	font-size: 2rem;
+	text-shadow: 0.1rem 0.1rem 0.1rem black;
+	transition: text-shadow 0.5s ease-in-out;
+}
+.backArrow:active,
+.nextArrow:active {
+	text-shadow: none;
+}
+.show {
+	position: fixed;
+	background: linear-gradient(
+		to top,
+		rgba(93, 253, 203, 0.5),
+		rgba(56, 228, 174, 0.5)
+	);
+
+	z-index: 950;
+}
+.hide {
+	display: none;
+	z-index: 950;
+}
+.full-nav {
+	display: none;
+}
+@media (min-width: 500px) {
+	.toggle-button {
+		display: none;
+	}
+	.full-nav {
+		display: flex;
+	}
 }

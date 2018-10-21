@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Head from './Components/Head'
+import Heading from './Components/Heading'
 import Home from './Components/Home'
-import Gallery from './Components/Gallery'
+import Gallery from './Components/Slider'
 import About from './Components/About'
 import Services from './Components/Services'
 
@@ -11,13 +11,19 @@ class App extends Component {
 	render() {
 		return (
 			<>
-				<Head />
-				<main>
-					<Home />
-					<Gallery />
-					<About />
-					<Services />
-				</main>
+				<aside>
+					<Heading />
+				</aside>
+				<Router>
+					<main>
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route exact path="/gallery" component={Gallery} />
+							<Route path="/about" component={About} />
+							<Route path="/services" component={Services} />
+						</Switch>
+					</main>
+				</Router>
 			</>
 		)
 	}

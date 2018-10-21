@@ -7,11 +7,11 @@ class Show extends Component {
 		this.state = {
 			pictures: [
 				'./img/angieslist2014.png',
-				'./img/pic1.JPG',
-				'./img/pic2.jpg',
-				'./img/pic3.jpg',
-				'./img/pic4.png',
-				'./img/special.png'
+				'./img/pic19.jpg',
+				'./img/pic28.jpg',
+				'./img/pic13.jpg',
+				'./img/pic26.jpg',
+				'./img/TN02.png'
 			],
 			index: 0,
 			transValue: 0
@@ -22,9 +22,24 @@ class Show extends Component {
 			transValue: -this.slideWidth() * this.state.index
 		}))
 	}
+	componentWillMount() {
+		this.setState(() => ({
+			pictures: [
+				'./img/angieslist2014.png',
+				'./img/pic19.jpg',
+				'./img/pic28.jpg',
+				'./img/pic13.jpg',
+				'./img/pic26.jpg',
+				'./img/TN02.png'
+			],
+			index: 0,
+			transValue: 0
+		}))
+	}
+
 	componentDidMount() {
 		window.addEventListener('resize', this.updateScreen)
-		this.slideShow = setInterval(this.nextPicture, 5000)
+		this.slideShow = setInterval(this.nextPicture, 4000)
 	}
 	nextPicture = () => {
 		if (this.state.index === this.state.pictures.length - 1) {
@@ -54,7 +69,7 @@ class Show extends Component {
 					}}
 				>
 					{this.state.pictures.map(pic => (
-						<Slide key={pic} pic={pic} width={this.slideWidth} />
+						<Slide key={pic} pic={pic} />
 					))}
 				</div>
 			</div>
