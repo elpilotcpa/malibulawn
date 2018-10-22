@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/malibulawn/precache-manifest.4f775b41c93b6f979ba494c816148e07.js"
+  "/malibulawn/precache-manifest.e6ad4f7e892386e661978b19ca92bf0d.js"
 );
 
 workbox.clientsClaim();
