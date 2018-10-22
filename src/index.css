@@ -18,10 +18,11 @@ header {
 }
 .content {
 	padding: 5rem 1rem 0 1rem;
+	display: flex;
+	justify-content: center;
 }
 h1 {
 	margin: 0;
-	/* text-align: center; */
 	padding: 0.2rem 0 0 3rem;
 	font-size: 2rem;
 }
@@ -30,7 +31,6 @@ h2 {
 }
 h3 {
 	margin: 0;
-	/* text-align: center; */
 	padding: 0 0.5rem 0.2rem 0;
 }
 button {
@@ -74,6 +74,7 @@ a:active {
 .slider {
 	position: relative;
 	max-width: 500px;
+	max-height: 500px;
 	margin: 0;
 
 	overflow: hidden;
@@ -82,10 +83,10 @@ a:active {
 
 .slider-frame {
 	position: relative;
-	height: 90%;
-	width: 100%;
 }
-
+img {
+	border-radius: 3%;
+}
 .slide {
 	display: inline-block;
 	height: 100%;
@@ -171,7 +172,14 @@ a:active {
 .contact-home {
 	display: none;
 }
-@media (min-width: 500px) {
+.home-sec {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.gallery {
+}
+@media (min-width: 700px) {
 	header {
 		display: flex;
 		justify-content: space-between;
@@ -214,8 +222,10 @@ a:active {
 	}
 	.contact-home {
 		display: flex;
-		flex-direction: column;
-		margin: 0 20%;
+	}
+	.contact-home img {
+		height: 13rem;
+		padding-left: 4rem;
 	}
 	.contact-home a {
 		text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
@@ -226,18 +236,28 @@ a:active {
 			-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
 			0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
 	}
+	.contact-links {
+		display: flex;
+		flex-direction: column;
+		padding: 0 0 0 1rem;
+	}
 	.content {
-		padding-top: 6rem;
+		padding-top: 8rem;
 		flex-wrap: wrap;
 	}
 	.home-sec {
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
+		flex-wrap: wrap;
 		font-size: 1.7rem;
 		line-height: 3rem;
 	}
 	.home-sec p {
 		max-width: 600px;
 		text-indent: 2rem;
+	}
+	.home-info {
+		padding: 0 0 0 2rem;
 	}
 }

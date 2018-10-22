@@ -6,12 +6,11 @@ class Show extends Component {
 		super(props)
 		this.state = {
 			pictures: [
-				'./img/angieslist2014.png',
 				'./img/pic19.jpg',
+				'./img/pic20.jpg',
 				'./img/pic28.jpg',
 				'./img/pic13.jpg',
-				'./img/pic26.jpg',
-				'./img/TN02.png'
+				'./img/pic26.jpg'
 			],
 			index: 0,
 			transValue: 0

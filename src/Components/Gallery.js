@@ -4,10 +4,11 @@ class Gallery extends Component {
 	render() {
 		return (
 			<>
-				<section>
-					<p>Here are some examples of our latest work</p>
+				<section className="gallery">
+					<h2>Here are some examples of our latest work</h2>
+
+					<Slider />
 				</section>
-				<Slider />
 			</>
 		)
 	}

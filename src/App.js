@@ -3,7 +3,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Heading from './Components/Heading'
 import Home from './Components/Home'
-import Gallery from './Components/Slider'
+import Gallery from './Components/Gallery'
 import About from './Components/About'
 import Services from './Components/Services'
 

@@ -2,20 +2,16 @@ import React, { Component } from 'react'
 import { HashRouter as Router, Link } from 'react-router-dom'
 class Heading extends Component {
 	state = {
-		popMenuOpen: false,
 		popMenu: 'hide'
 	}
 	_toggleMenu = () => {
-		this.setState(prevState => {
-			if (this.state.popMenuOpen === false) {
+		this.setState(() => {
+			if (this.state.popMenu === 'hide') {
 				return {
-					popMenuOpen: !prevState.popMenuOpen,
 					popMenu: 'show'
 				}
-			}
-			if (this.state.popMenuOpen) {
+			} else {
 				return {
-					popMenuOpen: !prevState.popMenuOpen,
 					popMenu: 'hide'
 				}
 			}
@@ -37,7 +33,6 @@ class Heading extends Component {
 								<h1>Malibu</h1> <h3>Landscaping & Lawn Service</h3>
 							</div>
 						</div>
-
 						<nav className="full-nav">
 							<span>
 								<Link to="/">Home</Link>
