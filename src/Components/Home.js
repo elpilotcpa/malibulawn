@@ -17,7 +17,7 @@ class Home extends Component {
 						<div className="contact-home">
 							<div class="contact-links">
 								Contact Us
-								<a href="tel://170491063">
+								<a href="tel://17049106379">
 									<i className="fas fa-phone-square" /> (704) 910-6379
 								</a>
 								<a href="tel://9045358034">
