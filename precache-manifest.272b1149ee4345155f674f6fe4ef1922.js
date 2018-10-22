@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/malibulawn/static/js/runtime~main.460f9075.js"
   },
   {
-    "revision": "71f6136f02d27fa58843",
-    "url": "/malibulawn/static/js/main.71f6136f.chunk.js"
+    "revision": "a232725ac62ba5255191",
+    "url": "/malibulawn/static/js/main.a232725a.chunk.js"
   },
   {
     "revision": "e748da123f2a1dfcfcf1",
     "url": "/malibulawn/static/js/1.e748da12.chunk.js"
   },
   {
-    "revision": "71f6136f02d27fa58843",
+    "revision": "a232725ac62ba5255191",
     "url": "/malibulawn/static/css/main.0e911035.chunk.css"
   },
   {
-    "revision": "8e67eaa2f2ad2dfcd204f2cad8dfef12",
+    "revision": "fef5a4e4691659e43c546c3714deca35",
     "url": "/malibulawn/index.html"
   }
 ];
