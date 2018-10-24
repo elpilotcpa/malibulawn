@@ -25,26 +25,26 @@ class Heading extends Component {
 					<header>
 						<div className="title">
 							<div className="mobile-nav">
-								<button className="toggle-button" onClick={this._toggleMenu}>
-									<i className="fas fa-bars" />
+								<button className="toggle-button" onClick={this._toggleMenu}>{this.state.popMenu === 'hide' ? <i className="fas fa-bars" /> : <i class="fas fa-times"></i>
+								}
 								</button>
 							</div>
-							<div class="title-full">
-								<h1>Malibu</h1> <h3>Landscaping & Lawn Service</h3>
+							<div className="title-full">
+								<h1 className="nav-text">Malibu</h1> <h3 className="nav-text">Landscaping & Lawn Service</h3>
 							</div>
 						</div>
 						<nav className="full-nav">
 							<span>
-								<Link to="/">Home</Link>
+								<Link to="/" className="nav-text">Home</Link>
 							</span>
 							<span>
-								<Link to="/gallery">Photo Gallery</Link>
+								<Link to="/gallery" className="nav-text">Photo Gallery</Link>
 							</span>
 							<span>
-								<Link to="/about">About Us</Link>
+								<Link to="/about" className="nav-text">About Us</Link>
 							</span>
 							<span>
-								<Link to="/services">Services</Link>
+								<Link to="/services" className="nav-text">Services</Link>
 							</span>
 						</nav>
 					</header>
