@@ -74,7 +74,7 @@ class Slider extends Component {
 		if (this.state.index !== 0) {
 			this.setState(prevState => ({
 				index: prevState.index - 1,
-				transValue: prevState.translateValue + this.slideWidth()
+				transValue: prevState.transValue + this.slideWidth()
 			}))
 		}
 	}
