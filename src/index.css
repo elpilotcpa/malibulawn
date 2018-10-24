@@ -7,6 +7,12 @@ body {
 	color: rgb(57, 61, 63);
 	font-family: 'Ledger', serif;
 }
+.angieslogo {
+	background-color: rgb(41, 160, 54);
+	width: 120px;
+	padding: 5px;
+	border-radius: 5px;
+}
 header {
 	margin: 0;
 	background: linear-gradient(to top, rgb(93, 253, 203), rgb(56, 228, 174));
@@ -260,7 +266,7 @@ img {
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: wrap;
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		line-height: 3rem;
 	}
 	.home-sec p {

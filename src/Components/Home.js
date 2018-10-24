@@ -13,6 +13,10 @@ class Home extends Component {
 							customers high quality Landscaping services personalized for their
 							unique needs. We are available for estimates that will fit your
 							budget. Serving Mint Hill, Matthews and Charlotte since 2010.
+							Check out our A Rating and reviews on
+							<a href="https://member.angieslist.com/member/store/10667294/reviews">
+								<img src="./img/angieslogo.png" className="angieslogo" />
+							</a>.
 						</p>
 						<div className="contact-home">
 							<div class="contact-links">
