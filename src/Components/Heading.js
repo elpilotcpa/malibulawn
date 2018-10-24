@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import { HashRouter as Router, Link } from 'react-router-dom'
 class Heading extends Component {
 	state = {
-		popMenu: 'hide'
+		popMenu: 'hidden'
 	}
 	_toggleMenu = () => {
 		this.setState(() => {
-			if (this.state.popMenu === 'hide') {
+			if (this.state.popMenu === 'hidden') {
 				return {
-					popMenu: 'show'
+					popMenu: 'shown'
 				}
 			} else {
 				return {
-					popMenu: 'hide'
+					popMenu: 'hidden'
 				}
 			}
 		})
@@ -25,26 +25,26 @@ class Heading extends Component {
 					<header>
 						<div className="title">
 							<div className="mobile-nav">
-								<button className="toggle-button" onClick={this._toggleMenu}>{this.state.popMenu === 'hide' ? <i className="fas fa-bars" /> : <i class="fas fa-times"></i>
-								}
+								<button className="toggle-button" onClick={this._toggleMenu}>{this.state.popMenu === 'hidden' ? <i className="fas fa-bars" /> : <i className="fas fa-times" />}
 								</button>
 							</div>
 							<div className="title-full">
-								<h1 className="nav-text">Malibu</h1> <h3 className="nav-text">Landscaping & Lawn Service</h3>
+								<h2 className="header-text">Malibu Landscaping & Lawn Service</h2>
 							</div>
+							<div className="mobile-spacer" />
 						</div>
 						<nav className="full-nav">
 							<span>
-								<Link to="/" className="nav-text">Home</Link>
+								<Link to="/" className="header-text">Home</Link>
 							</span>
 							<span>
-								<Link to="/gallery" className="nav-text">Photo Gallery</Link>
+								<Link to="/gallery" className="header-text">Photo Gallery</Link>
 							</span>
 							<span>
-								<Link to="/about" className="nav-text">About Us</Link>
+								<Link to="/about" className="header-text">About Us</Link>
 							</span>
 							<span>
-								<Link to="/services" className="nav-text">Services</Link>
+								<Link to="/services" className="header-text">Services</Link>
 							</span>
 						</nav>
 					</header>

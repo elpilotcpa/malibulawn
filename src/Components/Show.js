@@ -1,5 +1,20 @@
 import React, { Component } from 'react'
 import Slide from './Slide'
+import styled from 'styled-components'
+const ShowFrame = styled.div`
+	position: relative;
+	max-width: 500px;
+	max-height: 500px;
+	margin: 0 2rem;
+	overflow: hidden;
+	white-space: nowrap;
+	border-radius: 5%;
+	border: .1rem solid rgb(2, 60, 64);
+	@media (min-width: 700px) {
+	border: .1rem solid rgb(2, 60, 64);
+	border-radius: 5%;
+	}
+`
 
 class Show extends Component {
 	constructor(props) {
@@ -21,20 +36,9 @@ class Show extends Component {
 			transValue: -this.slideWidth() * this.state.index
 		}))
 	}
-	// componentWillMount() {
-	// 	this.setState(() => ({
-	// 		pictures: [
-	// 			'./img/angieslist2014.png',
-	// 			'./img/pic19.jpg',
-	// 			'./img/pic28.jpg',
-	// 			'./img/pic13.jpg',
-	// 			'./img/pic26.jpg',
-	// 			'./img/TN02.png'
-	// 		],
-	// 		index: 0,
-	// 		transValue: 0
-	// 	}))
-	// }
+	componentWillUnmount() {
+		clearInterval(this.slideShow)
+	}
 
 	componentDidMount() {
 		window.addEventListener('resize', this.updateScreen)
@@ -59,7 +63,7 @@ class Show extends Component {
 
 	render() {
 		return (
-			<div className="slider show-frame">
+			<ShowFrame>
 				<div
 					className="slide-frame"
 					style={{
@@ -71,7 +75,7 @@ class Show extends Component {
 						<Slide key={pic} pic={pic} />
 					))}
 				</div>
-			</div>
+			</ShowFrame>
 		)
 	}
 }
