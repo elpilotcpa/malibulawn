@@ -137,7 +137,7 @@ a:active {
 .show-frame {
 	margin: 0 2rem;
 }
-.show {
+.shown {
 	position: fixed;
 	height: 100%;
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
@@ -149,7 +149,7 @@ a:active {
 	z-index: 900;
 	transition: margin 0.5s ease-in-out;
 }
-.hide {
+.hidden {
 	position: fixed;
 	height: 100%;
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
