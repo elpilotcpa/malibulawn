@@ -14,7 +14,10 @@ class Home extends Component {
 							unique needs. We are available for estimates that will fit your
 							budget. Serving Mint Hill, Matthews and Charlotte since 2010.
 							Check out our A Rating and reviews on
-							<a href="https://member.angieslist.com/member/store/10667294/reviews">
+							<a href="https://member.angieslist.com/member/store/10667294/reviews"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<img src="./img/angieslogo.png" className="angieslogo" />
 							</a>.
 						</p>
