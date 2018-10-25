@@ -3,6 +3,56 @@ import React, { Component } from 'react'
 import SlideTwo from './SlideTwo'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
+import styled from 'styled-components'
+const SliderFrame = styled.div`
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+
+	.thumb-gallery{
+		display: none;
+	}
+	@media (min-width: 1100px) {
+		.thumb-gallery{
+			display: flex;
+			flex-wrap: wrap;
+			width: 500px;
+			justify-content: center;
+			margin: 1rem;
+			border-radius: 5%;
+			border: .1rem solid rgb(2, 60, 64);
+			background-color: rgb(93, 253, 203);
+			padding: 1rem 0;
+
+		}
+		.thumb-print {
+			margin: .2rem;
+			width: 60px;
+			height: 60px;
+
+
+
+		}
+		.thumb-print img{
+			width: 60px;
+			height: 60px;
+			border-radius: 5%;
+			border: .1rem solid rgb(2, 60, 64);
+
+		}
+		.not {
+			transition: opacity ease-in-out .4s, transform ease-in-out .7s;
+		}
+		.selected {
+			opacity:.2;
+			transform: scale(.5);
+			transition: opacity ease-in-out .4s, transform ease-in-out .7s;
+
+
+		}
+}
+
+`
 
 class Slider extends Component {
 	constructor(props) {
@@ -53,8 +103,15 @@ class Slider extends Component {
 				'./img/TN06.png'
 			],
 			index: 0,
-			transValue: 0
+			transValue: 0,
+
 		}
+	}
+	jumpTo = index => {
+		this.setState({
+			index,
+			transValue: -this.slideWidth() * index
+		})
 	}
 	updateScreen = () => {
 		this.setState(() => ({
@@ -93,26 +150,37 @@ class Slider extends Component {
 		}
 	}
 	slideWidth = () => {
-		return document.querySelector('.slide').clientWidth
+		return document.querySelector('.slide-frame').clientWidth
 	}
 
 	render() {
 		return (
-			<div className="slider">
-				<div
-					className="slide-frame"
-					style={{
-						transform: `translateX(${this.state.transValue}px)`,
-						transition: 'transform ease-out 0.45s'
-					}}
-				>
-					{this.state.pictures.map(pic => (
-						<SlideTwo key={pic} pic={pic} />
+			<SliderFrame>
+				<div className="slider">
+					<div
+						className="slide-frame"
+						style={{
+							transform: `translateX(${this.state.transValue}px)`,
+							transition: 'transform ease-out 0.45s'
+						}}
+					>
+						{this.state.pictures.map(pic => (
+							<SlideTwo key={pic} pic={pic} />
+						))}
+					</div>
+					<LeftArrow prevSlide={this.prevSlide} />
+					<RightArrow nextSlide={this.nextSlide} />
+				</div>
+				<div className="thumb-gallery">
+					{this.state.pictures.map((pic, index) => (
+
+						<button key={index} className="thumb-print" onClick={() => this.jumpTo(index)} disabled={this.index}>
+							<img className={this.state.index === index ? "selected" : "not"} src={pic} alt={pic} />
+						</button>
 					))}
 				</div>
-				<LeftArrow prevSlide={this.prevSlide} />
-				<RightArrow nextSlide={this.nextSlide} />
-			</div>
+			</SliderFrame>
+
 		)
 	}
 }

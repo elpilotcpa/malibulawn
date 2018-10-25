@@ -78,8 +78,8 @@ a:active {
 }
 .slider {
 	position: relative;
-	max-width: 500px;
-	max-height: 500px;
+	max-width: 300px;
+	max-height: 300px;
 	margin: 0;
 
 	overflow: hidden;
@@ -230,6 +230,11 @@ text-align: center;
 	.mobile-spacer {
 		flex: none;
 	}
+	.slider {
+		position: relative;
+		max-width: 500px;
+		max-height: 500px;
+	}
 	.shown,
 	.hidden {
 		display: none;
@@ -237,6 +242,6 @@ text-align: center;
 	.mobile-nav {
 	display: none;
 	}
-
+	
 
 }

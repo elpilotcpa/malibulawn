@@ -95,7 +95,7 @@ class Home extends Component {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<img src="./img/angieslogo.png" className="angieslogo" />
+							<img src="./img/angieslogo.png" className="angieslogo" alt="angies list logo" />
 						</a>
 					</div>
 					<div className="contact-home">
