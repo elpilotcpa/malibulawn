@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Show from './Show'
+// import Foot from './Foot'
+
 import styled from 'styled-components'
 const HomeDiv = styled.div`
 	margin: 5.5rem .5rem 0 .5rem;
@@ -114,6 +116,7 @@ class Home extends Component {
 						<img src="./img/angieslist2014.png" alt="angie list 2104" />
 					</div>
 				</div>
+				{/* <Foot /> */}
 			</HomeDiv>
 
 		)

@@ -6,6 +6,7 @@ import Home from './Components/Home'
 import Gallery from './Components/Gallery'
 import About from './Components/About'
 import Services from './Components/Services'
+import Foot from './Components/Foot'
 
 class App extends Component {
 	render() {
@@ -24,6 +25,9 @@ class App extends Component {
 						</Switch>
 					</main>
 				</Router>
+				<aside>
+					<Foot />
+				</aside>
 			</>
 		)
 	}

@@ -42,6 +42,7 @@ justify-content: center;
 		}
 		.not {
 			transition: opacity ease-in-out .4s, transform ease-in-out .7s;
+			cursor: pointer;
 		}
 		.selected {
 			opacity:.2;
