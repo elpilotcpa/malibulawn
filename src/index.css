@@ -1,5 +1,3 @@
-
-
 body {
 	margin: 0;
 	padding: 0;
@@ -21,7 +19,6 @@ header {
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
 }
 .content {
-	/* padding: 5rem 1rem 0 1rem; */
 	display: flex;
 	justify-content: center;
 }
@@ -87,6 +84,8 @@ a:active {
 
 	overflow: hidden;
 	white-space: nowrap;
+	border-radius: 5%;
+	border: .1rem solid rgb(2, 60, 64);
 }
 
 .slider-frame {
@@ -99,9 +98,9 @@ a:active {
 	width: 100%;
 	z-index: 90;
 	align-items: center;
-	/* margin: 0; */
 	padding: .35rem 0 0 0;
 	background-color: rgb(93, 253, 203);
+	
 }
 .slide-pic {
 	width: 96%;

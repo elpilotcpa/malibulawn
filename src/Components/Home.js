@@ -18,7 +18,6 @@ const HomeDiv = styled.div`
 	}
 	p {
 		text-indent: 1rem;
-		// padding: 0.5rem;
 		margin: 0;
 	}
 	.angiesdiv {
@@ -91,7 +90,7 @@ class Home extends Component {
 						budget. Serving Mint Hill, Matthews and Charlotte since 2010.
 					</p>
 					<div className="angiesdiv">
-						<p>Check out our A Rating on</p>
+						<p>Check Out Our <strong>A</strong> Rating On</p>
 						<a href="https://member.angieslist.com/member/store/10667294/reviews"
 							target="_blank"
 							rel="noopener noreferrer"

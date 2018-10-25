@@ -10,9 +10,9 @@ const ShowFrame = styled.div`
 	white-space: nowrap;
 	border-radius: 5%;
 	border: .1rem solid rgb(2, 60, 64);
-	@media (min-width: 700px) {
-	border: .1rem solid rgb(2, 60, 64);
-	border-radius: 5%;
+	div {
+		position: relative;
+
 	}
 `
 
