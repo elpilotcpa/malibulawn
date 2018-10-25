@@ -20,13 +20,19 @@ const GalleryDiv = styled.div`
 			width: 110px;
 			padding: 5px;
 			border-radius: 5px;
-			// margin-top: rem
 		}
 	}
 	@media (min-width: 700px) {
-		margin-top: 6rem;
+		margin-top: 5.5rem;
 		h2{
-			font-size: 1.5rem;
+			font-size: 1.3rem;
+		}
+		.angiesdiv {
+			// display: flex;
+			padding: 0;
+			h2 {
+				margin-bottom: 0.1rem;
+			}
 		}
 		.angieslogo {
 			width: 120px;
