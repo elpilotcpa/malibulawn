@@ -7,23 +7,11 @@ import Gallery from './Components/Gallery'
 import About from './Components/About'
 import Services from './Components/Services'
 import Foot from './Components/Foot'
-
 class App extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			currentPage: null
-		}
-	}
-
 	render() {
-
-		console.log(this.props)
 		return (
 			<>
-				<aside>
-					<Heading />
-				</aside>
+				<Heading />
 				<Router>
 					<main className="content">
 						<Switch>
@@ -34,9 +22,7 @@ class App extends Component {
 						</Switch>
 					</main>
 				</Router>
-				<aside>
-					<Foot />
-				</aside>
+				<Foot />
 			</>
 		)
 	}

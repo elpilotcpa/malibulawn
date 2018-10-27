@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Slider from './SubComponents/Slider'
+
 import styled from 'styled-components'
 
 const GalleryDiv = styled.div`
@@ -22,7 +23,6 @@ const GalleryDiv = styled.div`
 	}
 	@media (min-width: 700px) {
 		margin-top: 5.5rem;
-		height: 100%;
 		h2{
 			font-size: 1.3rem;
 		}
@@ -55,14 +55,12 @@ class Gallery extends Component {
 			<>
 				<GalleryDiv>
 					<h2>Some examples of our latest work</h2>
-
 					<Slider />
 					<div className="angiesdiv">
 						<h3>See More On</h3>
 						<a href="https://member.angieslist.com/member/store/10667294/about"
 							target="_blank"
-							rel="noopener noreferrer"
-						>
+							rel="noopener noreferrer">
 							<img src="./img/angieslogo.png" className="angieslogo" alt="angies list logo" />
 						</a>
 					</div>

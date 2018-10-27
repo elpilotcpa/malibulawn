@@ -5,10 +5,6 @@ const FootDiv = styled.div`
 width: 100%;
 background-color: rgb(56, 228, 174);
 z-index: 999;
-// position: fixed;
-// bottom: 0;
-
-	
 footer{
 	display:flex;
 	justify-content: center;
@@ -26,8 +22,6 @@ footer{
 	font-size: 1rem;
 }
 	@media (min-width: 1100px) {
-		position: fixed;
-		bottom: 0;
 		font-size: 1rem;
 		footer {
 		
@@ -42,14 +36,12 @@ footer{
 			justify-content: center;
 			height: 40px;
 			margin-left: .5rem;
-
 		}
 		.justindiv {
 			display: flex;
 			justify-content: center;
 			height: 40px;
 			margin-right: .5rem;
-
 		}
 		img {
 				width: 30px;
