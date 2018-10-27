@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Slider from './SubComponents/Slider'
+import Foot from './Foot'
 
 import styled from 'styled-components'
 
@@ -22,7 +23,8 @@ const GalleryDiv = styled.div`
 		}
 	}
 	@media (min-width: 700px) {
-		margin-top: 5.5rem;
+		margin: 5.5rem .5rem 6rem .5rem;;
+		height: 100%;
 		h2{
 			font-size: 1.3rem;
 		}
@@ -65,6 +67,8 @@ class Gallery extends Component {
 						</a>
 					</div>
 				</GalleryDiv>
+				<Foot />
+
 			</>
 		)
 	}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Foot from './Foot'
+
 
 const AboutDiv = styled.div`
 	margin-top: 4rem;
@@ -27,7 +29,7 @@ const AboutDiv = styled.div`
 	}
 	@media (min-width: 700px) {
 		margin: 8rem 0 4rem 0;
-		height: 100vh;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -90,6 +92,8 @@ class About extends Component {
 					</p>
 					</section>
 				</AboutDiv>
+				<Foot />
+
 			</>
 		)
 	}

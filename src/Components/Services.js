@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Foot from './Foot'
+
 import styled from 'styled-components'
 
 const ServicesDiv = styled.div`
@@ -159,6 +161,8 @@ class Services extends Component {
 						</div>
 					</section>
 				</ServicesDiv >
+				<Foot />
+
 			</>
 		)
 	}

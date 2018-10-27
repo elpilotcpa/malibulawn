@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Show from './SubComponents/Show'
+import Foot from './Foot'
+
 import styled from 'styled-components'
 
 const HomeDiv = styled.div`
@@ -29,8 +31,8 @@ const HomeDiv = styled.div`
 		padding-top: .5rem;
 	}
 	@media (min-width: 700px) {
-		margin-top: 2rem;
-		height: 100vh;
+		margin: 6.5rem .5rem 6rem .5rem;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -114,6 +116,8 @@ class Home extends Component {
 						</div>
 					</div>
 				</HomeDiv>
+				<Foot />
+
 			</>
 		)
 	}

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const FootDiv = styled.div`
+postion: absolute;
+bottom: 0;
 width: 100%;
 background-color: rgb(56, 228, 174);
 z-index: 999;
