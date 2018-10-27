@@ -19,7 +19,7 @@ const HomeDiv = styled.div`
 		display: none;
 	}
 	p {
-		text-indent: 1rem;
+		// text-indent: 1rem;
 		margin: 0;
 	}
 	.angiesdiv {
@@ -29,7 +29,7 @@ const HomeDiv = styled.div`
 		padding-top: .5rem;
 	}
 	@media (min-width: 700px) {
-		margin: 6.5rem .5rem 6rem .5rem;
+		margin: 6.5rem .5rem 10.4rem .5rem;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
@@ -69,7 +69,7 @@ const HomeDiv = styled.div`
 		}
 		p {
 		max-width: 600px;
-		text-indent: 2rem;
+		// text-indent: 2rem;
 		}
 		.home-info {
 			padding: 0 0 0 2rem;

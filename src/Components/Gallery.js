@@ -21,7 +21,7 @@ const GalleryDiv = styled.div`
 		}
 	}
 	@media (min-width: 700px) {
-		margin: 5.5rem .5rem 6rem .5rem;;
+		margin: 5.5rem .5rem 9.05rem .5rem;;
 		height: 100%;
 		h2{
 			font-size: 1.3rem;

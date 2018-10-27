@@ -5,6 +5,8 @@ const AboutDiv = styled.div`
 	margin-top: 4rem;
 	p{
 		padding: 0 .5rem;
+		line-height: 1.7rem;
+
 	}
 	section {
 		display: flex;
@@ -26,7 +28,7 @@ const AboutDiv = styled.div`
 		text-align: center;
 	}
 	@media (min-width: 700px) {
-		margin: 8rem 0 4rem 0;
+		margin: 5rem 0 5rem 0;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
@@ -40,7 +42,7 @@ const AboutDiv = styled.div`
 			margin: 1rem;
 		}
 		aside {
-			margin: 1rem 0;
+			margin: 2rem 0;
 			width: 500px;
 			img {
 				width: 490px;
