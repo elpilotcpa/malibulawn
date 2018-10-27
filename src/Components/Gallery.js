@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
-import Slider from './Slider'
+import Slider from './SubComponents/Slider'
 import styled from 'styled-components'
 
 const GalleryDiv = styled.div`
 	margin: 5rem .5rem 0 .5rem;
 	text-align: center;
-
+	height: 100vh;
 	h2 {
 		font-size: .9rem;
 		text-align: center;
-		margin-bottom: 1rem;
-		
-		
+		margin-bottom: 1rem;		
 	}
 	.angiesdiv{
 		padding-top: 1rem;
@@ -24,18 +22,24 @@ const GalleryDiv = styled.div`
 	}
 	@media (min-width: 700px) {
 		margin-top: 5.5rem;
+		height: 100%;
 		h2{
 			font-size: 1.3rem;
 		}
 		.angiesdiv {
-			// display: flex;
+			display: flex;
+			justify-content: center;
+			align-self: center;
 			padding: 0;
-			h2 {
-				margin-bottom: 0.1rem;
+			h3 {
+				font-size: 1rem;
+				margin: 0
+				padding: .7rem 0 0 0;
 			}
 		}
 		.angieslogo {
-			width: 120px;
+			width: 100px;
+			margin: .3rem 0 0 .4rem;
 		}
 		.angieslogo:hover {
 			box-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
@@ -54,7 +58,7 @@ class Gallery extends Component {
 
 					<Slider />
 					<div className="angiesdiv">
-						<h2>See More On</h2>
+						<h3>See More On</h3>
 						<a href="https://member.angieslist.com/member/store/10667294/about"
 							target="_blank"
 							rel="noopener noreferrer"

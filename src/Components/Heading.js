@@ -1,31 +1,33 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Link } from 'react-router-dom'
+import { HashRouter as Router, NavLink } from 'react-router-dom'
 class Heading extends Component {
 	state = {
-		popMenu: 'hidden'
+		popMenu: 'hidden nav-menu'
 	}
 	_toggleMenu = () => {
 		this.setState(() => {
-			if (this.state.popMenu === 'hidden') {
+			if (this.state.popMenu === 'hidden nav-menu') {
 				return {
-					popMenu: 'shown'
+					popMenu: 'shown nav-menu'
 				}
 			} else {
 				return {
-					popMenu: 'hidden'
+					popMenu: 'hidden nav-menu'
 				}
 			}
 		})
 	}
 
 	render() {
+		console.log(this.props)
+
 		return (
 			<Router>
 				<>
 					<header>
 						<div className="title">
 							<div className="mobile-nav">
-								<button className="toggle-button" onClick={this._toggleMenu}>{this.state.popMenu === 'hidden' ? <i className="fas fa-bars" /> : <i className="fas fa-times" />}
+								<button className="toggle-button" onClick={this._toggleMenu}>{this.state.popMenu === 'hidden nav-menu' ? <i className="fas fa-bars" /> : <i className="fas fa-times" />}
 								</button>
 							</div>
 							<div className="title-full">
@@ -34,43 +36,34 @@ class Heading extends Component {
 							<div className="mobile-spacer" />
 						</div>
 						<nav className="full-nav">
-							<span>
-								<Link to="/" className="header-text">Home</Link>
-							</span>
-							<span>
-								<Link to="/gallery" className="header-text">Photo Gallery</Link>
-							</span>
-							<span>
-								<Link to="/about" className="header-text">About Us</Link>
-							</span>
-							<span>
-								<Link to="/services" className="header-text">Services</Link>
-							</span>
+							<NavLink exact to="/" className="header-text" activeClassName="current-page">Home</NavLink>
+							<NavLink to="/gallery" className="header-text" activeClassName="current-page">Photo Gallery</NavLink>
+							<NavLink to="/about" className="header-text" activeClassName="current-page">About Us</NavLink>
+							<NavLink to="/services" className="header-text" activeClassName="current-page">Services</NavLink>
 						</nav>
 					</header>
 					<nav className={this.state.popMenu}>
-						<ul>
-							<li>
-								<Link to="/" onClick={this._toggleMenu}>
-									Home
-								</Link>
-							</li>
-							<li>
-								<Link to="/gallery" onClick={this._toggleMenu}>
-									Photo Gallery
-								</Link>
-							</li>
-							<li>
-								<Link to="/about" onClick={this._toggleMenu}>
-									About Us
-								</Link>
-							</li>
-							<li>
-								<Link to="/services" onClick={this._toggleMenu}>
-									Services
-								</Link>
-							</li>
-						</ul>
+
+						<NavLink exact to="/" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
+							Home
+								</NavLink>
+
+
+						<NavLink to="/gallery" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
+							Photo Gallery
+								</NavLink>
+
+
+						<NavLink to="/about" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
+							About Us
+								</NavLink>
+
+
+						<NavLink to="/services" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
+							Services
+								</NavLink>
+
+
 						<ul className="contact-list">
 							Contact Us
 							<li>

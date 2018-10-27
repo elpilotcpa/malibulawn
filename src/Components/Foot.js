@@ -3,12 +3,15 @@ import styled from 'styled-components'
 
 const FootDiv = styled.div`
 width: 100%;
+background-color: rgb(56, 228, 174);
+z-index: 999;
+// position: fixed;
+// bottom: 0;
 
 	
 footer{
 	display:flex;
 	justify-content: center;
-	margin-top: 1rem;
 	p {
 		text-indent: 0;
 		margin-right: .5rem;
@@ -31,17 +34,20 @@ footer{
 		justify-content: space-between;
 		align-items: center;
 		}
+		p {
+			margin:10px;
+		}
 		.reactdiv {
 			display: flex;
 			justify-content: center;
-			height: 50px;
+			height: 40px;
 			margin-left: .5rem;
 
 		}
 		.justindiv {
 			display: flex;
 			justify-content: center;
-			height: 50px;
+			height: 40px;
 			margin-right: .5rem;
 
 		}

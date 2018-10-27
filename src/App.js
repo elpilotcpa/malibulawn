@@ -9,7 +9,16 @@ import Services from './Components/Services'
 import Foot from './Components/Foot'
 
 class App extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			currentPage: null
+		}
+	}
+
 	render() {
+
+		console.log(this.props)
 		return (
 			<>
 				<aside>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import SlideTwo from './SlideTwo'
+import Slide from './Slide'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
 import styled from 'styled-components'
@@ -166,7 +166,7 @@ class Slider extends Component {
 						}}
 					>
 						{this.state.pictures.map(pic => (
-							<SlideTwo key={pic} pic={pic} />
+							<Slide key={pic} pic={pic} />
 						))}
 					</div>
 					<LeftArrow prevSlide={this.prevSlide} />

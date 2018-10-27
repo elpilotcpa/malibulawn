@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import Show from './Show'
-// import Foot from './Foot'
-
+import Show from './SubComponents/Show'
 import styled from 'styled-components'
+
 const HomeDiv = styled.div`
 	margin: 5.5rem .5rem 0 .5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100vh;
+
 	.angieslogo {
 		background-color: rgb(41, 160, 54);
 		width: 110px;
@@ -29,59 +30,57 @@ const HomeDiv = styled.div`
 		padding-top: .5rem;
 	}
 	@media (min-width: 700px) {
-		display: flex;
+		margin-top: 6rem;
+		height: 100%;
 
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-			font-size: 1.5rem;
-			line-height: 3rem;
-		
-			.angieslogo {
-				width: 120px;
-			}
-			.angieslogo:hover {
-				box-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		font-size: 1.3rem;
+		line-height: 3rem;
+		.angieslogo {
+			width: 120px;
+		}
+		.angieslogo:hover {
+			box-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
+			-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
+			-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
+			0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
+		}
+		.contact-home {
+			display: flex;
+		}
+		.contact-home img {
+			height: 13rem;
+			padding-left: 4rem;
+		}
+		.contact-home a {
+			text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
+		}
+		.contact-home a:hover {
+			text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
 				-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
 				-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
 				0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
-			}
-			.contact-home {
-				display: flex;
-			}
-			.contact-home img {
-				height: 13rem;
-				padding-left: 4rem;
-			}
-			.contact-home a {
-				text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
-			}
-			.contact-home a:hover {
-				text-shadow: 0.1rem 0.1rem 0.1rem rgb(56, 228, 174),
-					-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
-					-0.1rem -0.1rem 0.1rem rgb(56, 228, 174),
-					0.1rem 0.1rem 0.1rem rgb(56, 228, 174);
-			}
-			.contact-links {
-				display: flex;
-				flex-direction: column;
-				padding: 0 0 0 1rem;
-			}
-			 p {
-				max-width: 600px;
-				text-indent: 2rem;
-			}
-			.home-info {
-				padding: 0 0 0 2rem;
-			}
-			
-		
+		}
+		.contact-links {
+			display: flex;
+			flex-direction: column;
+			padding: 0 0 0 1rem;
+		}
+		p {
+		max-width: 600px;
+		text-indent: 2rem;
+		}
+		.home-info {
+			padding: 0 0 0 2rem;
+		}		
 	}
 `
 class Home extends Component {
 	render() {
 		return (
-
 			<HomeDiv>
 				<Show />
 				<div className="home-info">
@@ -95,8 +94,7 @@ class Home extends Component {
 						<p>Check Out Our <strong>A</strong> Rating On</p>
 						<a href="https://member.angieslist.com/member/store/10667294/reviews"
 							target="_blank"
-							rel="noopener noreferrer"
-						>
+							rel="noopener noreferrer">
 							<img src="./img/angieslogo.png" className="angieslogo" alt="angies list logo" />
 						</a>
 					</div>
@@ -116,11 +114,8 @@ class Home extends Component {
 						<img src="./img/angieslist2014.png" alt="angie list 2104" />
 					</div>
 				</div>
-				{/* <Foot /> */}
 			</HomeDiv>
-
 		)
 	}
 }
-
 export default Home
