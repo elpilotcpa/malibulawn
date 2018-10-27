@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Show from './SubComponents/Show'
-import Foot from './Foot'
-
 import styled from 'styled-components'
 
 const HomeDiv = styled.div`
@@ -116,8 +114,6 @@ class Home extends Component {
 						</div>
 					</div>
 				</HomeDiv>
-				<Foot />
-
 			</>
 		)
 	}

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Foot from './Foot'
-
 
 const AboutDiv = styled.div`
 	margin-top: 4rem;
@@ -92,8 +90,6 @@ class About extends Component {
 					</p>
 					</section>
 				</AboutDiv>
-				<Foot />
-
 			</>
 		)
 	}

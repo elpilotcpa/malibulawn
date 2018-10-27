@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Slider from './SubComponents/Slider'
-import Foot from './Foot'
-
 import styled from 'styled-components'
 
 const GalleryDiv = styled.div`
@@ -67,8 +65,6 @@ class Gallery extends Component {
 						</a>
 					</div>
 				</GalleryDiv>
-				<Foot />
-
 			</>
 		)
 	}
