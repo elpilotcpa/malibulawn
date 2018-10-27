@@ -29,8 +29,8 @@ const HomeDiv = styled.div`
 		padding-top: .5rem;
 	}
 	@media (min-width: 700px) {
-		margin: 6rem 0;
-		height: 100%;
+		margin-top: 2rem;
+		height: 100vh;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;

@@ -27,7 +27,7 @@ const AboutDiv = styled.div`
 	}
 	@media (min-width: 700px) {
 		margin: 8rem 0 4rem 0;
-		height: 100%;
+		height: 100vh;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
