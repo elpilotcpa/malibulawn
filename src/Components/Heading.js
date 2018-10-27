@@ -4,6 +4,7 @@ class Heading extends Component {
 	state = {
 		popMenu: 'hidden nav-menu'
 	}
+
 	_toggleMenu = () => {
 		this.setState(() => {
 			if (this.state.popMenu === 'hidden nav-menu') {
@@ -19,8 +20,6 @@ class Heading extends Component {
 	}
 
 	render() {
-		console.log(this.props)
-
 		return (
 			<Router>
 				<>
@@ -43,27 +42,18 @@ class Heading extends Component {
 						</nav>
 					</header>
 					<nav className={this.state.popMenu}>
-
 						<NavLink exact to="/" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
 							Home
-								</NavLink>
-
-
+						</NavLink>
 						<NavLink to="/gallery" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
 							Photo Gallery
-								</NavLink>
-
-
+						</NavLink>
 						<NavLink to="/about" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
 							About Us
-								</NavLink>
-
-
+						</NavLink>
 						<NavLink to="/services" className="mobile-link" activeClassName="mobile-current-page" onClick={this._toggleMenu}>
 							Services
-								</NavLink>
-
-
+						</NavLink>
 						<ul className="contact-list">
 							Contact Us
 							<li>

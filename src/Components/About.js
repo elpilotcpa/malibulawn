@@ -11,18 +11,15 @@ const AboutDiv = styled.div`
 		flex-direction: column;
 		align-items: center;
 	}
-	
 	aside {
 		width:300px;
 		padding: 10px 0 4px 10px;
 		border-radius: 10px;
 		border: .1rem solid rgb(2, 60, 64);
 		background-color: rgb(93, 253, 203);
-	
-		img{
+		img {
 			width: 290px;
 			border-radius: 5px;
-
 		}
 	}
 	h2 {

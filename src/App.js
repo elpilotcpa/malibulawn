@@ -7,6 +7,7 @@ import Gallery from './Components/Gallery'
 import About from './Components/About'
 import Services from './Components/Services'
 import Foot from './Components/Foot'
+
 class App extends Component {
 	render() {
 		return (

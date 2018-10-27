@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Show from './SubComponents/Show'
-
 import styled from 'styled-components'
 
 const HomeDiv = styled.div`
@@ -9,7 +8,6 @@ const HomeDiv = styled.div`
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
-
 	.angieslogo {
 		background-color: rgb(41, 160, 54);
 		width: 110px;
@@ -33,7 +31,6 @@ const HomeDiv = styled.div`
 	@media (min-width: 700px) {
 		margin: 6rem 0;
 		height: 100%;
-
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
