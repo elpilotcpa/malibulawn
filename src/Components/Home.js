@@ -19,7 +19,7 @@ const HomeDiv = styled.div`
 		display: none;
 	}
 	p {
-		// text-indent: 1rem;
+		max-width: 300px;
 		margin: 0;
 	}
 	.angiesdiv {
@@ -68,8 +68,7 @@ const HomeDiv = styled.div`
 			padding: 0 0 0 1rem;
 		}
 		p {
-		max-width: 600px;
-		// text-indent: 2rem;
+			max-width: 600px;
 		}
 		.home-info {
 			padding: 0 0 0 2rem;
