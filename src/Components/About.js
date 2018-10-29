@@ -6,7 +6,7 @@ const AboutDiv = styled.div`
 	p{
 		padding: 0 .5rem;
 		line-height: 1.7rem;
-
+		max-width:300px;
 	}
 	section {
 		display: flex;
@@ -34,6 +34,9 @@ const AboutDiv = styled.div`
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: wrap;
+		p {
+			max-width: 500px;
+		}
 		.about-title{
 			display: none;
 		}

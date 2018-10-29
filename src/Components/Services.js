@@ -32,6 +32,7 @@ const ServicesDiv = styled.div`
 	}
 	p{
 		padding: 0 1rem;
+		max-width:300px;
 	}
 	.logo {
 		width: 150px;
@@ -70,6 +71,9 @@ const ServicesDiv = styled.div`
 			.logo {
 				width: 200px;
 			}
+		}
+		p {
+			max-width: 800px;
 		}
 	}
 `
