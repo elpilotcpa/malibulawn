@@ -105,6 +105,7 @@ class Slider extends Component {
 			],
 			index: 0,
 			transValue: 0,
+			shuffledPics: null
 
 		}
 	}
@@ -119,8 +120,15 @@ class Slider extends Component {
 			transValue: -this.slideWidth() * this.state.index
 		}))
 	}
+	componentWillMount() {
+		let shuffledPics = this.shuffleArray(this.state.pictures)
+		this.setState(() => ({
+			shuffledPics: shuffledPics
+		}))
+	}
 	componentDidMount() {
 		window.addEventListener('resize', this.updateScreen)
+
 	}
 	prevSlide = () => {
 		if (this.state.index === 0) {
@@ -153,8 +161,19 @@ class Slider extends Component {
 	slideWidth = () => {
 		return document.querySelector('.slide-frame').clientWidth
 	}
+	shuffleArray = array => {
+		let i = array.length - 1;
+		for (; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			const temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
+		return array;
+	}
 
 	render() {
+
 		return (
 			<SliderFrame>
 				<div className="slider">
@@ -165,7 +184,7 @@ class Slider extends Component {
 							transition: 'transform ease-out 0.45s'
 						}}
 					>
-						{this.state.pictures.map(pic => (
+						{this.state.shuffledPics.map(pic => (
 							<Slide key={pic} pic={pic} />
 						))}
 					</div>

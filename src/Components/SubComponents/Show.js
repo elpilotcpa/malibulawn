@@ -21,14 +21,52 @@ class Show extends Component {
 		super(props)
 		this.state = {
 			pictures: [
+				'./img/pic01.jpg',
+				'./img/pic02.jpg',
+				'./img/pic03.jpg',
+				'./img/pic04.jpg',
+				'./img/pic05.jpg',
+				'./img/pic06.jpg',
+				'./img/pic07.jpg',
+				'./img/pic08.jpg',
+				'./img/pic09.jpg',
+				'./img/pic10.jpg',
+				'./img/pic11.jpg',
+				'./img/pic12.jpg',
+				'./img/pic13.jpg',
+				'./img/pic14.jpg',
+				'./img/pic15.jpg',
+				'./img/pic16.jpg',
+				'./img/pic17.jpg',
+				'./img/pic18.jpg',
 				'./img/pic19.jpg',
 				'./img/pic20.jpg',
+				'./img/pic21.jpg',
+				'./img/pic22.jpg',
+				'./img/pic23.jpg',
+				'./img/pic24.jpg',
+				'./img/pic25.jpg',
+				'./img/pic26.jpg',
+				'./img/pic27.jpg',
 				'./img/pic28.jpg',
-				'./img/pic13.jpg',
-				'./img/pic26.jpg'
+				'./img/pic29.jpg',
+				'./img/pic30.jpg',
+				'./img/pic31.jpg',
+				'./img/pic35.jpg',
+				'./img/pic36.jpg',
+				'./img/pic37.jpg',
+				'./img/pic38.jpg',
+				'./img/pic39.jpg',
+				'./img/pic40.jpg',
+				'./img/pic41.jpg',
+				'./img/TN03.png',
+				'./img/TN04.png',
+				'./img/TN05.png',
+				'./img/TN06.png'
 			],
 			index: 0,
-			transValue: 0
+			transValue: 0,
+			shuffledPics: null
 		}
 	}
 	updateScreen = () => {
@@ -38,6 +76,12 @@ class Show extends Component {
 	}
 	componentWillUnmount() {
 		clearInterval(this.slideShow)
+	}
+	componentWillMount() {
+		let shuffledPics = this.shuffleArray(this.state.pictures)
+		this.setState(() => ({
+			shuffledPics: shuffledPics
+		}))
 	}
 
 	componentDidMount() {
@@ -60,6 +104,16 @@ class Show extends Component {
 	slideWidth = () => {
 		return document.querySelector('.slide').clientWidth
 	}
+	shuffleArray = array => {
+		let i = array.length - 1;
+		for (; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			const temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
+		return array;
+	}
 
 	render() {
 		return (
@@ -71,7 +125,7 @@ class Show extends Component {
 						transition: 'transform ease-out 0.45s'
 					}}
 				>
-					{this.state.pictures.map(pic => (
+					{this.state.shuffledPics.map(pic => (
 						<Slide key={pic} pic={pic} />
 					))}
 				</div>
