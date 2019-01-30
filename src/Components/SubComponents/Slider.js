@@ -59,7 +59,7 @@ class Slider extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			pictures: [
+			pictures: this.shuffleArray([
 				'./img/pic01.jpg',
 				'./img/pic02.jpg',
 				'./img/pic03.jpg',
@@ -102,11 +102,9 @@ class Slider extends Component {
 				'./img/TN04.png',
 				'./img/TN05.png',
 				'./img/TN06.png'
-			],
+			]),
 			index: 0,
-			transValue: 0,
-			shuffledPics: null
-
+			transValue: 0
 		}
 	}
 	jumpTo = index => {
@@ -118,12 +116,6 @@ class Slider extends Component {
 	updateScreen = () => {
 		this.setState(() => ({
 			transValue: -this.slideWidth() * this.state.index
-		}))
-	}
-	componentWillMount() {
-		let shuffledPics = this.shuffleArray(this.state.pictures)
-		this.setState(() => ({
-			shuffledPics: shuffledPics
 		}))
 	}
 	componentDidMount() {
@@ -184,7 +176,7 @@ class Slider extends Component {
 							transition: 'transform ease-out 0.45s'
 						}}
 					>
-						{this.state.shuffledPics.map(pic => (
+						{this.state.pictures.map(pic => (
 							<Slide key={pic} pic={pic} />
 						))}
 					</div>
