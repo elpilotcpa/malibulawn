@@ -57,13 +57,8 @@ class Heading extends Component {
 						<ul className="contact-list">
 							Contact Us
 							<li>
-								<a href="tel://17049106379">
-									<i className="fas fa-phone-square" />
-								</a>
-							</li>
-							<li>
 								<a href="tel://9045358034">
-									<i className="fas fa-mobile" />
+									<i className="fas fa-phone-square" />
 								</a>
 							</li>
 							<li>

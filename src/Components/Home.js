@@ -99,11 +99,8 @@ class Home extends Component {
 						<div className="contact-home">
 							<div className="contact-links">
 								Contact Us
-								<a href="tel://17049106379">
-									<i className="fas fa-phone-square" /> (704) 910-6379
-								</a>
 								<a href="tel://9045358034">
-									<i className="fas fa-mobile" /> (904) 535-8034
+									<i className="fas fa-phone-square" /> (904) 535-8034
 								</a>
 								<a href="mailto:elpilotcpa@msn.com">
 									<i className="fas fa-envelope" /> elpilotcpa@msn.com
