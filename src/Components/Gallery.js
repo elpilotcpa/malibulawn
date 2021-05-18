@@ -5,14 +5,18 @@ import styled from 'styled-components'
 const GalleryDiv = styled.div`
 	margin: 5rem .5rem 0 .5rem;
 	text-align: center;
-	height: 100vh;
+	height: 100%;
 	h2 {
 		font-size: .9rem;
 		text-align: center;
 		margin-bottom: 1rem;		
 	}
 	.angiesdiv{
-		padding-top: 1rem;
+		margin: 10px;
+    h3 {
+      padding:  5px;
+      line-height: 1;
+    }
 		.angieslogo {
 			background-color: rgb(41, 160, 54);
 			width: 110px;
@@ -21,11 +25,13 @@ const GalleryDiv = styled.div`
 		}
 	}
 	@media (min-width: 700px) {
-		margin: 5.5rem .5rem 9.05rem .5rem;;
+		margin: 95px .5rem 5px .5rem;
 		height: 100%;
+
 		h2{
 			font-size: 1.3rem;
 		}
+    
 		.angiesdiv {
 			display: flex;
 			justify-content: center;
@@ -33,7 +39,7 @@ const GalleryDiv = styled.div`
 			padding: 0;
 			h3 {
 				font-size: 1rem;
-				margin: 0
+				margin: 0;
 				padding: .7rem 0 0 0;
 			}
 		}
@@ -50,24 +56,24 @@ const GalleryDiv = styled.div`
 	}
 `
 class Gallery extends Component {
-	render() {
-		return (
-			<>
-				<GalleryDiv>
-					<h2>Some examples of our latest work</h2>
-					<Slider />
-					<div className="angiesdiv">
-						<h3>See More On</h3>
-						<a href="https://member.angieslist.com/member/store/10667294/about"
-							target="_blank"
-							rel="noopener noreferrer">
-							<img src="./img/angieslogo.png" className="angieslogo" alt="angies list logo" />
-						</a>
-					</div>
-				</GalleryDiv>
-			</>
-		)
-	}
+  render() {
+    return (
+      <>
+        <GalleryDiv>
+          <h2>Some examples of our latest work</h2>
+          <Slider />
+          <div className="angiesdiv">
+            <h3>See More On</h3>
+            <a href="https://member.angieslist.com/member/store/10667294/about"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src="./img/angieslogo.png" className="angieslogo" alt="angies list logo" />
+            </a>
+          </div>
+        </GalleryDiv>
+      </>
+    )
+  }
 }
 
 export default Gallery
