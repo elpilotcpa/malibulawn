@@ -7,22 +7,34 @@ import About from './Components/About'
 import Services from './Components/Services'
 import Foot from './Components/Foot'
 
+const RouteWithMenu = ({ component, ...rest }) => {
+  const render = (Component) => (props) => {
+    return <Component {...props} />
+  }
+
+  return (
+    <>
+      <Heading />
+      <main className="content">
+        <Route {...rest} render={render(component)} />
+      </main>
+      <Foot />
+    </>
+  );
+}
+
 class App extends Component {
   render() {
     return (
       <>
-        <Heading />
         <Router >
-          <main className="content">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/gallery" component={Gallery} />
-              <Route path="/about" component={About} />
-              <Route path="/services" component={Services} />
-            </Switch>
-          </main>
+          <Switch>
+            <RouteWithMenu exact path="/" component={Home} />
+            <RouteWithMenu exact path="/gallery" component={Gallery} />
+            <RouteWithMenu exact path="/about" component={About} />
+            <RouteWithMenu exact path="/services" component={Services} />
+          </Switch>
         </Router>
-        <Foot />
       </>
     )
   }
