@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 class Heading extends Component {
   state = {
     popMenu: 'hidden nav-menu'

@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <>
         <Heading />
-        <Router>
+        <Router >
           <main className="content">
             <Switch>
               <Route exact path="/" component={Home} />
