@@ -191,12 +191,12 @@ class Show extends Component {
     const { img, imgs } = this.state
     if (img === imgs.length - 1) {
       this.setState(() => ({ img: 0 }),
-        () => setTimeout(this._showImg, 100));
+        () => setTimeout(this._showImg, 1000));
       return
     }
 
     this.setState(prevState => ({ img: prevState.img + 1 }),
-      () => setTimeout(this._showImg, 100));
+      () => setTimeout(this._showImg, 1000));
   }
 
   _showImg = () => {
