@@ -262,6 +262,10 @@ class Slider extends Component {
       setTimeout(this._next, 500)
     }
   }
+
+  _showImg = () => {
+    this.setState({ showImg: true });
+  }
   _prev = () => {
     const { img, imgs } = this.state
     if (img === 0) {
@@ -272,7 +276,7 @@ class Slider extends Component {
         }),
         () => {
           this._transValue();
-          setTimeout(this.setState({ showImg: true }), 100)
+          setTimeout(this._showImg, 100)
         }
       )
       return
@@ -284,7 +288,7 @@ class Slider extends Component {
       }),
       () => {
         this._transValue();
-        setTimeout(this.setState({ showImg: true }), 100)
+        setTimeout(this._showImg, 100)
       }
     )
   }
@@ -298,7 +302,7 @@ class Slider extends Component {
         }),
         () => {
           this._transValue();
-          setTimeout(this.setState({ showImg: true }), 100)
+          setTimeout(this._showImg, 100)
         }
       )
       return
@@ -310,7 +314,7 @@ class Slider extends Component {
       }),
       () => {
         this._transValue();
-        setTimeout(this.setState({ showImg: true }), 100)
+        setTimeout(this._showImg, 100)
       }
     )
   }
@@ -336,7 +340,7 @@ class Slider extends Component {
       }),
       () => {
         this._transValue();
-        setTimeout(this.setState({ showImg: true }), 100);
+        setTimeout(this._showImg, 100);
       }
     )
   }

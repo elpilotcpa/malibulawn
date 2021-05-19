@@ -180,6 +180,7 @@ class Show extends Component {
     }
     return clone;
   }
+
   _imgChange = () => {
     this.setState(() => ({
       showImg: false
@@ -189,22 +190,18 @@ class Show extends Component {
   _next = () => {
     const { img, imgs } = this.state
     if (img === imgs.length - 1) {
-      this.setState(
-        () => ({
-          img: 0,
-        }), () => {
-          setTimeout(this.setState({ showImg: true }), 100)
-        });
+      this.setState(() => ({ img: 0 }),
+        () => setTimeout(this._showImg, 100));
       return
     }
-    this.setState(
-      prevState => ({
-        img: prevState.img + 1,
-      }), () => {
-        setTimeout(this.setState({ showImg: true }), 100)
-      });
+
+    this.setState(prevState => ({ img: prevState.img + 1 }),
+      () => setTimeout(this._showImg, 100));
   }
 
+  _showImg = () => {
+    this.setState({ showImg: true });
+  }
 
   render() {
     const { showImg, img, imgs } = this.state
