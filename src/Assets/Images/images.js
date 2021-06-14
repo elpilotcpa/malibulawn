@@ -49,7 +49,7 @@ import IMG_047 from './IMG_047.JPG';
 import IMG_048 from './IMG_048.JPG';
 
 export const images = [
-  { src: IMG_001, isLandscape: false },
+  { src: IMG_000, isLandscape: false },
   { src: IMG_001, isLandscape: true },
   { src: IMG_002, isLandscape: false },
   { src: IMG_003, isLandscape: true },
