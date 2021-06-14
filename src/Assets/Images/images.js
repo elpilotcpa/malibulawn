@@ -1,3 +1,4 @@
+import IMG_000 from './IMG_000.png';
 import IMG_001 from './IMG_001.jpg';
 import IMG_002 from './IMG_002.jpg';
 import IMG_003 from './IMG_003.jpg';
@@ -48,6 +49,7 @@ import IMG_047 from './IMG_047.JPG';
 import IMG_048 from './IMG_048.JPG';
 
 export const images = [
+  { src: IMG_001, isLandscape: false },
   { src: IMG_001, isLandscape: true },
   { src: IMG_002, isLandscape: false },
   { src: IMG_003, isLandscape: true },
