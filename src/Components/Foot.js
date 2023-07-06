@@ -83,11 +83,11 @@ class Foot extends Component {
             </div>
           </div>
           <div className="justindiv">
-            <p>Built by <a
+            <p>Malibu <a
               href="https://www.justin-oliver.com"
               target="_balnk"
               rel="noopener noreferrer">
-              Justin Lee
+              Landscaping
 					</a>
             </p>
           </div>
