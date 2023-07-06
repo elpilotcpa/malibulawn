@@ -6,9 +6,10 @@ body {
 	color: rgb(57, 61, 63);
 	font-family: 'Ledger', serif;
 }
+
 header {
 	margin: 0;
-	background-color: rgb(56, 228, 174);
+	background-color: rgb(99, 99, 99);
 	color: rgb(2, 60, 64);
 	font-family: 'Molle', cursive;
 	font-weight: 400;
@@ -18,6 +19,7 @@ header {
 	width: 100%;
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
 }
+
 h1 {
 	margin: 0;
 	padding: 0.2rem 0 0 3rem;
@@ -25,14 +27,17 @@ h1 {
 	font-weight: 400;
 	font-style: italic;
 }
+
 h2 {
 	margin: 0;
-	padding-top:.3rem;
+	padding-top: .3rem;
 }
+
 h3 {
 	margin: 0;
 	padding: 0 0.5rem 0.2rem 0;
 }
+
 button {
 	border: none;
 	background: transparent;
@@ -43,14 +48,17 @@ button {
 	padding: 0;
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
 }
+
 button:active {
 	transform: scale(0.8);
 }
+
 nav ul {
 	list-style: none;
 	padding: 0 1rem;
 	margin: 5rem 0 0 0;
 }
+
 li {
 	padding: 0.5rem 0;
 }
@@ -59,13 +67,15 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  min-height: calc(100vh - 54px);
+	min-height: calc(100vh - 54px);
 
 }
+
 .header-text {
 	font-weight: 400;
 	font-style: italic;
 }
+
 .nav-menu {
 	display: flex;
 	flex-direction: column;
@@ -74,22 +84,23 @@ li {
 	position: fixed;
 	height: 100%;
 	text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
-	background: linear-gradient(
-		to top,
-		rgba(93, 253, 203, 0.8),
-		rgba(56, 228, 174, 0.8)
-	);
+	background: linear-gradient(to top,
+			rgba(107, 107, 107, 0.8),
+			rgba(94, 94, 94, 0.8));
 	z-index: 900;
 }
+
 .mobile-link {
 	padding: .5rem;
 	transition: color .4s ease-in-out;
 }
+
 .mobile-current-page {
 	color: rgb(255, 242, 241);
 	transition: color .4s ease-in-out;
 
-} 
+}
+
 a {
 	color: rgb(2, 60, 64);
 	text-decoration: none;
@@ -98,9 +109,11 @@ a {
 		text-shadow 0.4s ease-in-out;
 	outline: none;
 }
+
 a:active {
 	color: rgb(255, 242, 241);
 }
+
 /* .slider {
 	position: relative;
 	max-width: 300px;
@@ -125,71 +138,85 @@ a:active {
 	align-items: center;
 	padding: .35rem 0 0 0;
 	background-color: rgb(93, 253, 203);
-	
+
 }
+
 .slide-pic {
 	width: 96%;
 	height: 96%;
 	align-content: center;
-	margin: .5% 2% ;
+	margin: .5% 2%;
 	border-radius: 4%;
 }
+
 .nextArrow {
 	position: absolute;
 	top: 47%;
 	right: 25px;
 	z-index: 99;
-	color: rgb(93, 253, 203);
+	color: rgb(85, 85, 85);
 	font-size: 2rem;
 	text-shadow: -0.1rem 0.1rem 0.1rem black;
 	transition: text-shadow 0.5s ease-in-out;
 }
+
 .backArrow {
 	position: absolute;
 	top: 47%;
 	left: 25px;
 	z-index: 99;
-	color: rgb(93, 253, 203);
+	color: rgb(87, 87, 87);
 	font-size: 2rem;
 	text-shadow: 0.1rem 0.1rem 0.1rem black;
 	transition: text-shadow 0.5s ease-in-out;
 }
+
 .backArrow:active,
 .nextArrow:active {
 	text-shadow: none;
 }
+
 .show-frame {
 	margin: 0 2rem;
 }
+
 .shown {
 	transition: margin 0.5s ease-in-out;
 }
+
 .hidden {
 	margin-left: -100%;
 	transition: margin 0.5s ease-in-out;
 }
+
 .full-nav {
 	display: none;
 }
+
 .title {
 	display: flex;
 	justify-content: space-between;
 }
+
 .mobile-nav {
 	margin: 2rem 0 0 0.5rem;
 	flex: 1;
 }
+
 .mobile-spacer {
-	flex:1;
+	flex: 1;
 }
+
 .title-full {
-flex: 7;
-text-align: center;
+	flex: 7;
+	text-align: center;
 }
+
 .contact-list {
 	text-align: center;
 	margin: 0;
 }
+
 .contact-list i {
 	font-size: 3rem;
 	margin: 0.5rem 0 0 0;
@@ -200,41 +227,49 @@ text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-    justify-content: flex-end;
+		justify-content: flex-end;
 	}
+
 	h1 {
 		font-size: 4rem;
 		padding: 0 1rem;
 	}
+
 	h3 {
 		font-size: 2em;
 		padding: 1rem 0 0 1rem;
 	}
+
 	a:hover {
 		text-shadow: 0.1rem 0.1rem 0.5rem rgb(255, 242, 241),
 			-0.1rem -0.1rem 0.5rem rgb(255, 242, 241),
 			-0.1rem -0.1rem 0.5rem rgb(255, 242, 241),
 			0.1rem 0.1rem 0.5rem rgb(255, 242, 241);
 	}
+
 	.title-full {
 		display: flex;
 		align-items: center;
-		flex:none;
+		flex: none;
 		font-size: 1.5rem;
 	}
+
 	.toggle-button {
 		display: none;
 	}
+
 	.full-nav {
 		display: flex;
 		text-align: center;
 		font-size: 1.5rem;
 	}
+
 	.full-nav a {
-		padding:.5rem 1rem .1rem 1rem;
+		padding: .5rem 1rem .1rem 1rem;
 		border-radius: 40% 40% 0 0;
 		transition: background-color .4s ease-in-out;
 	}
+
 	.current-page {
 		background-color: rgb(255, 242, 241);
 		border-radius: 40% 40% 0 0;
@@ -245,16 +280,19 @@ text-align: center;
 	.mobile-spacer {
 		flex: none;
 	}
+
 	.slider {
 		position: relative;
 		max-width: 500px;
 		max-height: 500px;
 	}
+
 	.shown,
 	.hidden {
 		display: none;
 	}
+
 	.mobile-nav {
-	display: none;
+		display: none;
 	}
 }
